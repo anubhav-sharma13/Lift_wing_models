@@ -1,0 +1,23 @@
+﻿Data Features (Edit Quality)
+1. The first segregation of data took place in the datasets section . I went for human labelled data ( despite their less availability in terms of languages) as why not . 
+2.  Enwiki.human_labeled_revisions.20k_2015 
+   1. Damaging (T)  , goodfaith (T) - 260
+   2. Damaging(T) - 764
+   3. Damaging (F) - 19122
+   4. goodfaith(T) - 19375
+   5. goodfaith(F) - 505
+   6. Damaging(F) , goodfaith(F) - 15
+3.  Enwiki.labeled_revisions.20k_2015.json
+   1. Damaging (F) - 19134
+   2. Damaging(T) - 764
+   3. goodfaith(T) - 19379
+   4. goodfaith(F) - 519
+   5. Damaging(F) , goodfaith(F) - 15
+4. Bnwiki.autolabeled_revisions.20k_2017.json
+   1. reverted_for_damage(F) - 18970
+   2. reverted_for_damage(T) - 388
+   3. needs_review(F) - 16392
+   4. needs_review(T) - 2966
+5. As can be seen from the information in the previous point , it can be seen that data is skewed ( almost 95% data is goodfaith/non damaging).
+6. Also the data is inconsistent , as I didn’t understand why a damaging article can even be labelled as good faith . 
+7. The other structural flaws of data are mentioned in the Edit Quality report .
