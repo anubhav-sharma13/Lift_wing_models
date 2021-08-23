@@ -1,0 +1,13 @@
+1. Here we took 5000 random datapoints out of the existing 15000 datapoints for multiple reasons . (some of the datapoints were of very poor quality (with no introduction and some datapoints were broken revids ))
+2. Results 
+    (i) F1 score - 0.769
+    (ii) val_loss - 1.44372 (perplexity)
+    (iii) avg_validation_loss - 1.42872
+    (iv) avg_train_loss =- 1.55944
+    (v) overall_accuracy - 0.70625
+    (vi) F1 score _filter - 0.793
+3. Sentiment Analysis - I selected random sentences from all three tags (GA , WA and B ) and calculated the matrix of neutral counts . 
+    1. GA - 75.3 %
+    2. WA - 59.5 %
+    3. B - 76.0 %
+These articles had neutral labels at threshold of 0.5.  

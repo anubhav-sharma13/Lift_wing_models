@@ -1,0 +1,17 @@
+1. The first task was to get dataset. 
+2. I tried getting datasets but failed due to failing modules of the ores/article_quality apis.
+3. Then I got some small piece of data (hand annotated english article quality data) and carried on with that as part of monolingual experimentation by using the transformer based approach .
+4. Transformer-based approaches have revolutionized NLP research and achieved state-of-the-art (SOTA) results across different tasks and languages. Transfer learning capabilities of the transformer-based approaches have provided a cutting edge over conventional deep learning approaches like CNNs (Convolutional Neural Networks) and RNNs (Recurrent Neural Networks). 
+5. As the number of data instances in the article_quality was pretty less, we can leverage transfer-learning capabilities to generalize well across different domains (not only on seen/train datasets). So, I have chosen RoBERTa (Robustly Optimized BERT Pre-training Approach), an extension of BERT with changes to the pretraining procedure. The modifications include:
+    5.1 Training the model longer, with bigger batches, over more data.
+    5.2 Removing the next sentence prediction objective.
+    5.3 Training on longer sequences.
+    5.4 Dynamically changing the masking pattern applied to the training data.
+6. These pretraining changes have been attributed to generalization on downstream tasks well when compared to BERT. 
+7. The dataset involves a json element of title (the text extracted as the 'title' is the first 400(or less) words of the introduction of the GA , FA  , B articles and 'label' is the label where GA is 1 , FA is 0 and B is 2 ) .
+8. I have used train.txt (90%) for training and val.txt(10%) for validation and saved the model checkpoint that obtains the best results on the validation dataset.
+9 .For the task, I have used F1 and perplexity as the evaluation metric .
+
+10 . For the other part of the experimentation , I tried with working on sentiment analysis model . for it I used Cardiff Nlp model . I tried all the articles text that I extracted (with GA,WA and B labels ) and input then to the cardiff NLP model . 
+11. This approach was based on the hypothesis that all good wikipedia articles should have neutral sentiments. (so I was planning it as a way to get more datapoints ) . 
+12. The entire analysis is written in the statistics report of article quality . 
